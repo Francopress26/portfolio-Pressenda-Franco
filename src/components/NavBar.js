@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon2 from '../assets/img/icons8-octocat.svg';
+import navIcon3 from '../assets/img/mail.png';
+
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -46,17 +47,17 @@ export const NavBar = () => {
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.linkedin.com/in/franco-pressenda/" target="a_blank"><img src={navIcon1} alt="" /></a>
+                <a href="https://github.com/Francopress26" target="a_blank"><img src={navIcon2} alt="" /></a>
+                <a href="mailto:francopress26@hotmail.com?Subject=Hi%20I%20saw%20your%20profile%20and%20I%20would%20like%20to%20contact%20you"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
+              {/* <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+              </HashLink> */}
             </span>
           </Navbar.Collapse>
         </Container>
